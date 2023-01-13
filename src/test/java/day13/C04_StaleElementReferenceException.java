@@ -1,10 +1,13 @@
 package day13;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utilities.TestBase;
+
 public class C04_StaleElementReferenceException extends TestBase {
+
     @Test
     public void staleElementReferenceExceptionTest1(){
         driver.get("https://www.techproeducation.com");
@@ -33,7 +36,12 @@ public class C04_StaleElementReferenceException extends TestBase {
         waitFor(5);
 //        SAYFA YENILENMEDEN ONCE BULDUGUM ELEMENTI, SAYFA YENILENDIKDEN SONRA KULLANMAK ISTEDIM
         lmsLoginLink.click();// org.openqa.selenium.StaleElementReferenceException
+
+
 //        COZUM ESKI(SLATE ELEMENT) ELEMENTI TEKRAR LOCATE ET
 //        driver.findElement(By.linkText("LMS LOGIN")).click();
+
+
+
     }
 }
