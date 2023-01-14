@@ -37,8 +37,15 @@ public class C02_WebTables extends TestBase {
     //    Task 3 : Son row daki dataları print edin
     @Test
     public void sonSatirVerileri(){
-      driver.get("https://the-internet.herokuapp.com/tables");
-      List<WebElement> sonSatir = driver.findElements(By.xpath("//table[@id='table1']//tbody//tr[last()]//td"));
+        driver.get("https://the-internet.herokuapp.com/tables");
+        List<WebElement> sonSatir = driver.findElements(By.xpath("//table[@id='table1']//tbody//tr[last()]//td"));
         sonSatir.forEach(veri-> System.out.println(veri.getText()));
+    }
+    //    Task 4 : 5. Column datalarini print edin
+    @Test
+    public void sutun5Test(){
+        driver.get("https://the-internet.herokuapp.com/tables");
+        List<WebElement> sutun5 = driver.findElements(By.xpath("//table[@id='table1']//tbody//tr//td[5]"));
+        sutun5.forEach(veri-> System.out.println(veri.getText()));
     }
 }
