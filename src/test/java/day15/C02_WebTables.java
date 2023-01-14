@@ -22,8 +22,23 @@ public class C02_WebTables extends TestBase {
         System.out.println("TABLE 1 VERILERI");
         System.out.println(table1);
         List<WebElement> tumVeriler = driver.findElements(By.xpath("//table[@id='table1']//td"));
+//        tumVeriler.forEach(t-> System.out.println(t.getText()));//LAMDA
         for (WebElement veri : tumVeriler){
             System.out.println(veri.getText());
         }
+    }
+    @Test
+    public void row3Print(){
+        //    Task 2 : 3. Row’ datalarını print edin
+        driver.get("https://the-internet.herokuapp.com/tables");
+        List<WebElement> row3Elements = driver.findElements(By.xpath("//table[@id='table1']//tbody//tr[3]//td"));
+        row3Elements.forEach(veri-> System.out.println(veri.getText()));
+    }
+    //    Task 3 : Son row daki dataları print edin
+    @Test
+    public void sonSatirVerileri(){
+      driver.get("https://the-internet.herokuapp.com/tables");
+      List<WebElement> sonSatir = driver.findElements(By.xpath("//table[@id='table1']//tbody//tr[last()]//td"));
+        sonSatir.forEach(veri-> System.out.println(veri.getText()));
     }
 }
