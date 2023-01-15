@@ -8,6 +8,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class C01_ExelRead {
     @Test
@@ -48,7 +50,15 @@ public class C01_ExelRead {
         int kullanililanSatirSaysi = sheet1.getPhysicalNumberOfRows();
         System.out.println(kullanililanSatirSaysi);
 
-//
+// Variable olusturalim. Bu verileri excel deki country, capital verileri
+        Map<String,String> ulkeBaskentleri = new HashMap<>();
+
+        for ( int satirSayisi=1;satirSayisi<kullanililanSatirSaysi;satirSayisi++){
+            String country = sheet1.getRow(satirSayisi).getCell(0).toString();
+            String capital = sheet1.getRow(satirSayisi).getCell(1).toString();
+            ulkeBaskentleri.put(country,capital);
+        }
+        System.out.println(ulkeBaskentleri);
 
 
     }
