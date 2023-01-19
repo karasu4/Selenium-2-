@@ -34,5 +34,14 @@ Ayni sayfada tekrar Enroll Free elementi gorunur olacak sekilde scroll et ve ekr
         scrollIntoViewJS(driver.findElement(By.xpath("//span[.='Enroll Free Course']")));
         waitFor(3);
         takeScreenShotOfPage();
+//        Ayni sayfada WHY US? elementi gorunur olacak sekilde scroll et ve ekran goruntusunu al
+        scrollIntoViewJS(driver.findElement(By.xpath("//h3[.='WHY US?']")));
+        waitFor(3);
+        takeScreenShotOfPage();
+//        Ayni sayfada Enroll Free elementi gorunur olacak sekilde scroll et ve ekran goruntusunu al
+        scrollIntoViewJS(driver.findElement(By.xpath("//span[.='Enroll Free Course']")));
+        waitFor(3);
+        takeScreenShotOfPage();
+
     }
 }
