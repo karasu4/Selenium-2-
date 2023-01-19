@@ -43,5 +43,13 @@ Ayni sayfada tekrar Enroll Free elementi gorunur olacak sekilde scroll et ve ekr
         waitFor(3);
         takeScreenShotOfPage();
 
+//        EN USTE GIT
+        scrollTopJS();
+        waitFor(3);
+
+//        EN ALTA GIT
+        scrollEndJS();
+        waitFor(3);
+
     }
 }
